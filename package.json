@@ -1,0 +1,24 @@
+{
+  "name": "e-commerce-back-end",
+  "version": "1.0.0",
+  "description": "A back-end framework for an e-commerce website, which uses NodeJS, Express & Mysql",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mus-ali1/E-Commerce-Back-End.git"
+  },
+  "author": "Mustafa Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mus-ali1/E-Commerce-Back-End/issues"
+  },
+  "homepage": "https://github.com/mus-ali1/E-Commerce-Back-End#readme"
+}
