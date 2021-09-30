@@ -4,7 +4,9 @@
   "description": "A back-end framework for an e-commerce website, which uses NodeJS, Express & Mysql",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "sequelize": "^6.6.5"
   },
   "devDependencies": {},
   "scripts": {
