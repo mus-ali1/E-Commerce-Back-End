@@ -53,6 +53,7 @@ router.put('/:id', async (req, res) => {
     //req.params will return parameters in the matched route.
     try {
         const categoryDataToUpdateById = await Category.findByPk(req.params.id);
+        console.log(categoryDataToUpdateById);
         if (!categoryDataToUpdateById) {
             res.status(404).json({
                 message: `No category found with id :${req.params.id} to delete!`,
