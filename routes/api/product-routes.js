@@ -8,12 +8,13 @@ router.get('/', async (req, res) => {
     // find all products
     try {
         const productDataAll = await Product.findAll({
-            include: [
-                { model: Category, attributes: ["category_name"] },
-                { model: Tag, through: ProductTag, as: "product_tags" },
-            ],
-            order: [["id", "ASC"]],
+            // include: [
+            //     { model: Category, attributes: ["category_name"] },
+            //     { model: Tag, through: ProductTag, as: "product_tags" },
+            // ],
+            // order: [["id", "ASC"]],
         });
+        console.log(productDataAll);
         res.status(200).json(productDataAll);
     } catch (err) {
         res.status(500).json(err);
@@ -26,12 +27,12 @@ router.get('/:id', async (req, res) => {
     // find a single product by its `id`
     try {
         const productDataById = await Product.findByPk(req.params.id, {
-            include: [
-                { model: Category },
-                { model: Tag, through: ProductTag, as: "product_tags" },
-            ],
+            // include: [
+            //     { model: Category },
+            //     { model: Tag, through: ProductTag, as: "product_tags" },
+            // ],
         });
-
+        console.log(productDataById);
         if (!productDataById) {
             res
                 .status(404)
